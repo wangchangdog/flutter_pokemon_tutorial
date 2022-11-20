@@ -47,57 +47,53 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: MediaQuery.of(context).size.width,
-        child: 
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
             Stack(
-              children: [
+              children: <Widget>[
                 Container(
                   padding: const EdgeInsets.all(32),
                   child: Image.network(
-                    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+                    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/138.png",
                     height: 100,
                     width: 100,
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.all(8),
-                  child: const Text(
-                    'No.25',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+                    padding: const EdgeInsets.all(8),
+                    child: const Text('No 138',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ))),
               ],
             ),
-              Text(
-                "Omanyte",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+            Text(
+              "Omanyte",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
               ),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Chip(
-                      label: Text("Rock"),
-                      backgroundColor: Colors.grey,
-                    ),
-                    Chip(label: Text("Water"),
+            ),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Chip(
+                    label: Text("Rock"),
+                    backgroundColor: Colors.grey,
+                  ),
+                  Chip(
+                    label: Text("Water"),
                     backgroundColor: Colors.blue,
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
+                  ),
+                ],
+              ),
+            )
+          ],
         ),
-      );
+      ),
+    );
   }
 }
